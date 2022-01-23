@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" th:background="black">
+<head>
+    <title>BSD support Offer page</title>
+</head>
+<style th:href="@{/css/css.css}"></style>
+<style />
+<body>
+<h1>The Current offers</h1>
+
+<table>
+    <div th:each="os :${osList}">
+        <tr>
+            <td><span th:text="${os.name}"/></td>
+            <td><span th:text="${os.getVersion()}"/></td>
+            <td><span th:text="${os.getShortDescription()}"/></td>
+            <td><span th:text="${os.getSupport().asText()}"/></td>
+        </tr>
+    </div>
+</table>
+</body>
+</html>

@@ -1,0 +1,8 @@
+body {
+    background-color: black;
+}
+
+table,tr,td {
+    border-style: solid;
+    border-color: darkblue;
+}
